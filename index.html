@@ -397,11 +397,7 @@
     });
 
     // simple form handlers (default: show message, prevent real submission)
-    function quoteSubmit(e) {
-      e.preventDefault();
-      alert('Thanks! We received your quote request. We will contact you shortly.');
-      e.target.reset();
-    }
+   
     function contactSubmit(e) {
       e.preventDefault();
       document.getElementById('contact-feedback').classList.remove('hidden');
@@ -421,6 +417,7 @@
 </body>
 
 </html>
+
 
 
 
