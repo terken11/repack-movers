@@ -340,19 +340,21 @@
 
         <div>
           <div class="bg-white p-6 rounded-lg shadow">
-            <form action="#" onsubmit="contactSubmit(event)" class="space-y-3">
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <input required name="name" placeholder="Full name" class="border px-3 py-2 rounded w-full" />
-                <input required name="phone" placeholder="Phone or WhatsApp" class="border px-3 py-2 rounded w-full" />
-              </div>
-              <input required type="email" name="email" placeholder="Email (optional)" class="border px-3 py-2 rounded w-full" />
-              <textarea name="message" rows="4" placeholder="Message / Move details" class="border px-3 py-2 rounded w-full"></textarea>
-              <div class="flex gap-3 items-center">
-                <button type="submit" class="bg-red-600 text-white px-4 py-2 rounded">Send Message</button>
-                <span class="text-sm text-gray-500">Or <a href="mailto:info@moframovers.com" class="text-red-600">email us</a></span>
-              </div>
-              <p id="contact-feedback" class="text-sm text-red-600 hidden">Thanks — we will contact you shortly.</p>
-            </form>
+
+
+<form name="contact" method="POST" data-netlify="true" class="space-y-3">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+    <input required name="name" placeholder="Full name" class="border px-3 py-2 rounded w-full" />
+    <input required name="phone" placeholder="Phone or WhatsApp" class="border px-3 py-2 rounded w-full" />
+  </div>
+  <input type="email" name="email" placeholder="Email (optional)" class="border px-3 py-2 rounded w-full" />
+  <textarea name="message" rows="4" placeholder="Message / Move details" class="border px-3 py-2 rounded w-full"></textarea>
+  <button type="submit" class="bg-red-600 text-white px-4 py-2 rounded">Send Message</button>
+</form>
+
+
+
+            
           </div>
         </div>
       </div>
@@ -421,6 +423,7 @@
 </body>
 
 </html>
+
 
 
 
