@@ -18,6 +18,13 @@
     @keyframes reveal { to { opacity: 1; transform: none; } }
   </style>
 </head>
+<script>
+  if (window.location.search.includes('success=true')) {
+    alert("✅ Thank you! We will contact you soon.");
+  }
+</script>
+
+  
 <body class="antialiased text-gray-800 bg-gray-50">
 
   <!-- Floating WhatsApp -->
@@ -105,13 +112,10 @@
             </form>-->
 
 <form name="quote" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-  <!-- required hidden input -->
   <input type="hidden" name="form-name" value="quote" />
-
   <p class="hidden">
     <label>Don’t fill this out: <input name="bot-field" /></label>
   </p>
-
   <input required name="name" placeholder="Your full name" class="w-full border rounded px-3 py-2" />
   <input required type="tel" name="phone" placeholder="Phone (e.g. +2547...)" class="w-full border rounded px-3 py-2" />
   <select name="service" class="w-full border rounded px-3 py-2">
@@ -121,10 +125,8 @@
     <option>Packing & Unpacking</option>
     <option>Storage</option>
   </select>
-
   <button type="submit" class="w-full bg-red-600 text-white py-2 rounded font-medium">Request Quote</button>
 </form>
-
 
 
 
@@ -424,6 +426,7 @@
 </body>
 
 </html>
+
 
 
 
