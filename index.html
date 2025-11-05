@@ -407,12 +407,7 @@
 
     // simple form handlers (default: show message, prevent real submission)
    
-    function contactSubmit(e) {
-      e.preventDefault();
-      document.getElementById('contact-feedback').classList.remove('hidden');
-      e.target.reset();
-      setTimeout(()=> document.getElementById('contact-feedback').classList.add('hidden'), 5000);
-    }
+   
 
     // small reveal on load
     window.addEventListener('load', ()=> {
@@ -426,6 +421,7 @@
 </body>
 
 </html>
+
 
 
 
