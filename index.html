@@ -91,7 +91,7 @@
           <aside class="bg-white rounded-lg p-6 shadow-lg glass text-gray-900 max-w-md mx-auto reveal" style="animation-delay:0.2s">
             <h3 class="text-xl font-semibold mb-2">Get a Free Quote</h3>
             <p class="text-sm text-gray-600 mb-4">Tell us about your move and we'll call you with an estimate.</p>
-            <form id="quote-form" action="#" onsubmit="quoteSubmit(event)" class="space-y-3">
+            <!--<form id="quote-form" action="#" onsubmit="quoteSubmit(event)" class="space-y-3">
               <input required name="name" placeholder="Your full name" class="w-full border rounded px-3 py-2" />
               <input required type="tel" name="phone" placeholder="Phone (e.g. +2547...)" class="w-full border rounded px-3 py-2" />
               <select name="service" class="w-full border rounded px-3 py-2">
@@ -102,7 +102,30 @@
                 <option>Storage</option>
               </select>
               <button type="submit" class="w-full bg-red-600 text-white py-2 rounded font-medium">Request Quote</button>
-            </form>
+            </form>-->
+
+<form name="quote" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onsubmit="this.reset(); alert('Thanks! We will contact you shortly.');">
+
+  <input required name="name" placeholder="Your full name" class="w-full border rounded px-3 py-2" />
+  <input required type="tel" name="phone" placeholder="Phone (e.g. +2547...)" class="w-full border rounded px-3 py-2" />
+  <select name="service" class="w-full border rounded px-3 py-2">
+    <option value="">Select service</option>
+    <option>House Moving</option>
+    <option>Office Relocation</option>
+    <option>Packing & Unpacking</option>
+    <option>Storage</option>
+  </select>
+  <button type="submit" class="w-full bg-red-600 text-white py-2 rounded font-medium">Request Quote</button>
+
+</form>
+
+
+
+
+
+
+
+            
             <p class="text-xs text-gray-600 mt-3">Or call us: <a href="tel:+254788556271" class="text-red-600">+254788556271</a></p>
           </aside>
         </div>
@@ -398,6 +421,7 @@
 </body>
 
 </html>
+
 
 
 
