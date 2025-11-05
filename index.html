@@ -104,7 +104,13 @@
               <button type="submit" class="w-full bg-red-600 text-white py-2 rounded font-medium">Request Quote</button>
             </form>-->
 
-<form name="quote" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onsubmit="this.reset(); alert('Thanks! We will contact you shortly.');">
+<form name="quote" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+  <!-- required hidden input -->
+  <input type="hidden" name="form-name" value="quote" />
+
+  <p class="hidden">
+    <label>Don’t fill this out: <input name="bot-field" /></label>
+  </p>
 
   <input required name="name" placeholder="Your full name" class="w-full border rounded px-3 py-2" />
   <input required type="tel" name="phone" placeholder="Phone (e.g. +2547...)" class="w-full border rounded px-3 py-2" />
@@ -115,9 +121,10 @@
     <option>Packing & Unpacking</option>
     <option>Storage</option>
   </select>
-  <button type="submit" class="w-full bg-red-600 text-white py-2 rounded font-medium">Request Quote</button>
 
+  <button type="submit" class="w-full bg-red-600 text-white py-2 rounded font-medium">Request Quote</button>
 </form>
+
 
 
 
@@ -417,6 +424,7 @@
 </body>
 
 </html>
+
 
 
 
